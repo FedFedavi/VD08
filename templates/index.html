@@ -42,6 +42,21 @@
     {% endif %}
     </div>
 
+    <div class="result">
+        {% if quotes %}
+           {% for quote in quotes %}
+               <div class="card">
+                   <div class="card-body">
+                       <h3 class="card-title">Цитата:</h3>
+                       <p class="card-text">{{ quote.quote }}</p>
+                       <p class="card-text">Author: {{ quote.author }}</p>
+                       <p class="card-text">Category: {{ quote.category }}</p>
+                   </div>
+               </div>
+           {% endfor %}
+        {% endif %}
+   </div>
+
 
     <!-- Подключение Bootstrap JS и зависимостей -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
